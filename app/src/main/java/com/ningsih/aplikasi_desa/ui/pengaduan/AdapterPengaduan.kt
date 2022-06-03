@@ -1,0 +1,56 @@
+package com.ningsih.aplikasi_desa.ui.pengaduan
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
+import com.ningsih.aplikasi_desa.R
+import com.ningsih.aplikasi_desa.databinding.ItemAdapterPengaduanBinding
+import com.ningsih.aplikasi_desa.databinding.ItemAdapterPotensiBinding
+import com.ningsih.aplikasi_desa.response.PengaduanItem
+import com.ningsih.aplikasi_desa.response.PotensiItem
+import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterPotensi
+
+class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerView.Adapter<AdapterPengaduan.ViewHolder>(){
+    inner class ViewHolder(private val binding: ItemAdapterPengaduanBinding) :
+        RecyclerView.ViewHolder(binding.root){
+        fun onBindItem(pengaduanItem: PengaduanItem?){
+            binding.isiPengaduan.text = pengaduanItem?.isiPengaduan
+            binding.namaUser.text = pengaduanItem?.ditambahkanOleh
+            binding.root.setOnClickListener {
+//                Toast.makeText(binding.root.context, pengaduanItem?., Toast.LENGTH_SHORT).show()
+//                click(pengaduanItem)
+            }
+        }
+    }
+
+    private val itemListPengaduan = mutableListOf<PengaduanItem?>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(
+            ItemAdapterPengaduanBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.onBindItem(itemListPengaduan?.get(position))
+    }
+
+    override fun getItemCount(): Int {
+        return itemListPengaduan.size
+    }
+
+    fun addItem(itemPengaduan : List<PengaduanItem?>){
+        itemListPengaduan.clear()
+        itemListPengaduan.addAll(itemPengaduan)
+        notifyDataSetChanged()
+    }
+
+}
