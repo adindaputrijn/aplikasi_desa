@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/pemberitahuan"
+        android:icon="@drawable/ic_notification"
+        android:title="Pemberitahuan"/>
+
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/ic_person"
+        android:title="Profil"/>
+
+<!--    <item-->
+<!--        android:id="@+id/lainnya"-->
+<!--        android:icon="@drawable/ic_other"-->
+<!--        android:title="Lainnya"/>-->
+
+</menu>
