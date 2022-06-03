@@ -57,9 +57,20 @@ interface ApiService {
     ): retrofit2.Call<ResponseLogin>
 
     @FormUrlEncoded
-    @POST("user/pengaduan")
+    @POST("pengaduan")
     fun pengaduan(
-        @Field("pengaduan") pengaduan: String
+        @Field("pengaduan") pengaduan: String,
+        @Field("nama") nama: String
+
     ): retrofit2.Call<ResponsePengaduan>
+
+
+    @FormUrlEncoded
+    @POST("pengaduan/submit")
+    fun pengaduanSubmit(
+        @Field("pengaduan") pengaduan: String,
+        @Field("nama") nama: String
+
+    ): retrofit2.Call<GeneralResponse>
 
 }

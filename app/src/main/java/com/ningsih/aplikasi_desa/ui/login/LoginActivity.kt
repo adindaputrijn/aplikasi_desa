@@ -3,7 +3,6 @@ package com.ningsih.aplikasi_desa.ui.login
 import android.app.Dialog
 import android.content.Intent
 import android.content.res.Resources
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -71,7 +70,7 @@ class LoginActivity : BottomSheetDialogFragment() {
 
     private fun initViewview() {
         val nik = view?.findViewById<TextInputEditText>(R.id.nik)
-        val btnSignIn = view?.findViewById<Button>(R.id.btnRegister)
+        val btnSignIn = view?.findViewById<Button>(R.id.btn_kirim)
         val textViewRegister = view?.findViewById<TextView>(R.id.register)
 
         textViewRegister?.setOnClickListener {
