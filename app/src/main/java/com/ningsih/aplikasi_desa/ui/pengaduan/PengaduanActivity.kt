@@ -21,7 +21,6 @@ class PengaduanActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnKirim.setOnClickListener {
-            Toast.makeText(this@PengaduanActivity, "", Toast.LENGTH_SHORT).show()
             validasiInput()
         }
 

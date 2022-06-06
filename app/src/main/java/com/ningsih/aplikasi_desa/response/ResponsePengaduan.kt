@@ -1,13 +1,15 @@
 package com.ningsih.aplikasi_desa.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class ResponsePengaduan(
 
 	@field:SerializedName("pengaduan")
 	val pengaduan: List<PengaduanItem?>? = null
 )
-
+@Parcelize
 data class PengaduanItem(
 
 	@field:SerializedName("isi_pengaduan")
@@ -24,4 +26,4 @@ data class PengaduanItem(
 
 	@field:SerializedName("is_selesai")
 	val isSelesai: String? = null
-)
+): Parcelable

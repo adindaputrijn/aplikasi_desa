@@ -16,8 +16,10 @@ import retrofit2.Call
 import retrofit2.Response
 
 class LembagaActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLembagaBinding
     private lateinit var adapterLembaga: AdapterLembaga
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lembaga)

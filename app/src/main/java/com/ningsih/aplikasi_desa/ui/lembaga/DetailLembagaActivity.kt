@@ -5,8 +5,10 @@ import android.os.Bundle
 import com.ningsih.aplikasi_desa.R
 import com.ningsih.aplikasi_desa.databinding.ActivityDetailLayananBinding
 import com.ningsih.aplikasi_desa.databinding.ActivityDetailLembagaBinding
+import com.ningsih.aplikasi_desa.databinding.ActivityDetailPengaduanBinding
 import com.ningsih.aplikasi_desa.response.LayananItem
 import com.ningsih.aplikasi_desa.response.LembagaItem
+import com.ningsih.aplikasi_desa.response.PengaduanItem
 
 class DetailLembagaActivity : AppCompatActivity() {
 

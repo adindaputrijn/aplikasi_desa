@@ -14,7 +14,10 @@
         android:theme="@style/Theme.Aplikasi_Desa"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ListPengaduanActivity"
+            android:name=".ui.pengaduan.DetailPengaduanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pengaduan.ListPengaduanActivity"
             android:exported="false" />
         <activity
             android:name=".ui.berita.DetailBeritaActivity"
@@ -51,12 +54,6 @@
             android:exported="true" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.pengaduan.PengaduanActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -64,10 +61,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.pengaduan.PengaduanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBp-8xGVnd--O8DqLZO4Fhip0LWTBQmxsU"/>
     </application>
 
 </manifest>

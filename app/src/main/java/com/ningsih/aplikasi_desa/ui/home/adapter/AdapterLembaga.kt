@@ -11,7 +11,6 @@ import com.ningsih.aplikasi_desa.R
 import com.ningsih.aplikasi_desa.databinding.ItemAdapterLembagaBinding
 import com.ningsih.aplikasi_desa.response.LembagaItem
 
-
 class AdapterLembaga(private val click: (LembagaItem?) -> Unit): RecyclerView.Adapter<AdapterLembaga.ViewHolder>(){
     inner class ViewHolder(private val binding: ItemAdapterLembagaBinding):
         RecyclerView.ViewHolder(binding.root){

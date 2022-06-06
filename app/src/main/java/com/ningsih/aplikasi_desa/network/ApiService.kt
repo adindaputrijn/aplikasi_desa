@@ -73,4 +73,10 @@ interface ApiService {
 
     ): retrofit2.Call<GeneralResponse>
 
+    @GET("pengaduan")
+    fun getAllPengaduan(): retrofit2.Call<ResponsePengaduan>
+
+    @GET("detailPengaduan")
+    fun getAllDetailPengaduan(@Path("id_pengaduan")idPengaduan: String?) : retrofit2.Call<ResponsePengaduan>
+
 }

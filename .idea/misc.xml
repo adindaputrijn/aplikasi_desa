@@ -5,14 +5,24 @@
       <map>
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_register.xml" value="0.1385" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_berita.xml" value="0.1" />
-        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_potensi.xml" value="0.1" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_layanan.xml" value="0.18568840579710144" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_lembaga.xml" value="0.18704710144927536" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_pengaduan.xml" value="0.18704710144927536" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_potensi.xml" value="0.22" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_program.xml" value="0.18568840579710144" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_layanan.xml" value="0.18568840579710144" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_lembaga.xml" value="0.18704710144927536" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_list_pengaduan.xml" value="0.1947463768115942" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_main.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_pengaduan.xml" value="0.22" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_potensi.xml" value="0.1947463768115942" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_program_desa.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/fragment_home.xml" value="0.1933876811594203" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_lembaga.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_pengaduan.xml" value="0.19010416666666666" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_potensi.xml" value="0.18704710144927536" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
       </map>
     </option>

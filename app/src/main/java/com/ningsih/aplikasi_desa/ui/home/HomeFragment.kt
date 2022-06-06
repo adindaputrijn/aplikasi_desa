@@ -20,6 +20,8 @@ import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterBerita
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterKategori
 import com.ningsih.aplikasi_desa.ui.layanan.LayananActivity
 import com.ningsih.aplikasi_desa.ui.lembaga.LembagaActivity
+import com.ningsih.aplikasi_desa.ui.pengaduan.AdapterPengaduan
+import com.ningsih.aplikasi_desa.ui.pengaduan.ListPengaduanActivity
 import com.ningsih.aplikasi_desa.ui.potensi.PotensiActivity
 import com.ningsih.aplikasi_desa.ui.programDesa.ProgramDesaActivity
 import com.pixplicity.easyprefs.library.Prefs
@@ -31,6 +33,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapterBerita: AdapterBerita
     private lateinit var adapterKategori: AdapterKategori
+    private lateinit var adapterPengaduan: AdapterPengaduan
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -77,6 +80,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.notif.setOnClickListener {
             Prefs.clear()
             requireActivity().recreate()
+        }
+
+//        adapterPengaduan = AdapterPengaduan {
+//            if (it?.idPengaduan == 1){
+//
+//            }
+//        }
+
+        binding.listPengaduan.setOnClickListener {
+            Intent(requireActivity(), ListPengaduanActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         getBerita()

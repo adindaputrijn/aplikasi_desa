@@ -16,6 +16,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.ningsih.aplikasi_desa.R
 import com.ningsih.aplikasi_desa.network.NetworkConfig
 import com.ningsih.aplikasi_desa.response.ResponseLogin
+import com.ningsih.aplikasi_desa.ui.home.HomeFragment
 import com.ningsih.aplikasi_desa.ui.register.RegisterActivity
 import com.ningsih.aplikasi_desa.utils.Constant
 import com.pixplicity.easyprefs.library.Prefs
@@ -62,13 +63,13 @@ class LoginActivity : BottomSheetDialogFragment() {
             })
         }
 
-        initViewview()
+        initViewview(view)
 
         return bottomSheets
 
     }
 
-    private fun initViewview() {
+    private fun initViewview(view: View?) {
         val nik = view?.findViewById<TextInputEditText>(R.id.nik)
         val btnSignIn = view?.findViewById<Button>(R.id.btn_kirim)
         val textViewRegister = view?.findViewById<TextView>(R.id.register)
@@ -93,12 +94,13 @@ class LoginActivity : BottomSheetDialogFragment() {
                 ) {
                     if (response.isSuccessful){
                         Prefs.putString(Constant.NIK, response.body()?.user?.nik)
+
                         requireActivity().recreate()
                     }
                 }
 
                 override fun onFailure(call: Call<ResponseLogin>, t: Throwable) {
-
+                    t.printStackTrace()
                 }
 
             })

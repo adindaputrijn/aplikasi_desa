@@ -18,18 +18,18 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
     inner class ViewHolder(private val binding: ItemAdapterPengaduanBinding) :
         RecyclerView.ViewHolder(binding.root){
         fun onBindItem(pengaduanItem: PengaduanItem?){
-            binding.isiPengaduan.text = pengaduanItem?.isiPengaduan
-            binding.namaUser.text = pengaduanItem?.ditambahkanOleh
+            binding.namaPengaduan.text = pengaduanItem?.ditambahkanPada
+
             binding.root.setOnClickListener {
-//                Toast.makeText(binding.root.context, pengaduanItem?., Toast.LENGTH_SHORT).show()
-//                click(pengaduanItem)
+                Toast.makeText(binding.root.context, pengaduanItem?.ditambahkanPada, Toast.LENGTH_SHORT).show()
+                click(pengaduanItem)
             }
         }
     }
 
     private val itemListPengaduan = mutableListOf<PengaduanItem?>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterPengaduan.ViewHolder {
         return ViewHolder(
             ItemAdapterPengaduanBinding.inflate(
                 LayoutInflater.from(parent.context),
