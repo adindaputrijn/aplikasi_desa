@@ -13,6 +13,7 @@ import com.ningsih.aplikasi_desa.response.PengaduanItem
 class DetailLembagaActivity : AppCompatActivity() {
 
     private  lateinit var binding: ActivityDetailLembagaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

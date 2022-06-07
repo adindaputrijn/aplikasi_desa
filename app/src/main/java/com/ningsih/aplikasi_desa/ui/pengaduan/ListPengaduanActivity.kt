@@ -24,8 +24,6 @@ class ListPengaduanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_pengaduan)
-
 
         binding = ActivityListPengaduanBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -37,7 +35,7 @@ class ListPengaduanActivity : AppCompatActivity() {
                 }
             }else {
 
-                Toast.makeText(this, it?.ditambahkanOleh, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, it?.ditambahkanOleh, Toast.LENGTH_SHORT).show()
                 Intent(this@ListPengaduanActivity, DetailPengaduanActivity::class.java).apply {
                     putExtra("id_pengaduan", it)
                     startActivity(this)
@@ -64,7 +62,7 @@ class ListPengaduanActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<ResponsePengaduan>, t: Throwable) {
-                    Toast.makeText(this@ListPengaduanActivity, t.message, Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@ListPengaduanActivity, t.message, Toast.LENGTH_SHORT).show()
 
                 }
 

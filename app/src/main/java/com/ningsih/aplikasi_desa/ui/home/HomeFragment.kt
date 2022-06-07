@@ -13,17 +13,19 @@ import com.ningsih.aplikasi_desa.R
 import com.ningsih.aplikasi_desa.databinding.FragmentHomeBinding
 import com.ningsih.aplikasi_desa.network.NetworkConfig
 import com.ningsih.aplikasi_desa.response.ResponseBerita
+import com.ningsih.aplikasi_desa.response.ResponseGaleri
 import com.ningsih.aplikasi_desa.response.ResponseKategori
 import com.ningsih.aplikasi_desa.ui.berita.BeritaActivity
 import com.ningsih.aplikasi_desa.ui.galeri.ActivityGaleri
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterBerita
+import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterGaleri
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterKategori
 import com.ningsih.aplikasi_desa.ui.layanan.LayananActivity
 import com.ningsih.aplikasi_desa.ui.lembaga.LembagaActivity
-import com.ningsih.aplikasi_desa.ui.pengaduan.AdapterPengaduan
 import com.ningsih.aplikasi_desa.ui.pengaduan.ListPengaduanActivity
 import com.ningsih.aplikasi_desa.ui.potensi.PotensiActivity
 import com.ningsih.aplikasi_desa.ui.programDesa.ProgramDesaActivity
+import com.ningsih.aplikasi_desa.utils.Constant
 import com.pixplicity.easyprefs.library.Prefs
 import retrofit2.Call
 import retrofit2.Response
@@ -33,7 +35,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapterBerita: AdapterBerita
     private lateinit var adapterKategori: AdapterKategori
-    private lateinit var adapterPengaduan: AdapterPengaduan
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,6 +45,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             adapter = adapterBerita
             layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL,false)
         }
+
+        binding.home.text = "Welcome ${Prefs.getString(Constant.NAMA)}"
+        binding.nik.text = "${Prefs.getString(Constant.NIK)}"
 
         adapterKategori = AdapterKategori{
             if (it?.idKategori == 1) {
@@ -82,17 +86,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             requireActivity().recreate()
         }
 
-//        adapterPengaduan = AdapterPengaduan {
-//            if (it?.idPengaduan == 1){
-//
+//        binding.listPengaduan.setOnClickListener {
+//            if (!Prefs.contains(Constant.NIK)) {
+//                Intent(requireActivity(), ListPengaduanActivity::class.java).apply {
+//                    startActivity(this)
+//                }
 //            }
 //        }
-
-        binding.listPengaduan.setOnClickListener {
-            Intent(requireActivity(), ListPengaduanActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
 
         getBerita()
         getKategori()

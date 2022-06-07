@@ -23,6 +23,7 @@ class AdapterLembaga(private val click: (LembagaItem?) -> Unit): RecyclerView.Ad
                 }
             }
         }
+
     private val itemListLembaga = mutableListOf<LembagaItem?>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterLembaga.ViewHolder {

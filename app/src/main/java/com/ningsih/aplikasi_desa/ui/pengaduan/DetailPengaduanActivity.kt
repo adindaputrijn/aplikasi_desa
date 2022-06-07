@@ -6,6 +6,7 @@ import com.ningsih.aplikasi_desa.databinding.ActivityDetailPengaduanBinding
 import com.ningsih.aplikasi_desa.response.PengaduanItem
 
 class DetailPengaduanActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityDetailPengaduanBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,10 +17,6 @@ class DetailPengaduanActivity : AppCompatActivity() {
 
         val idPengaduan = intent.getParcelableExtra<PengaduanItem>("id_pengaduan")
 
-        getDetailPengaduan(idPengaduan)
-    }
-
-    private fun getDetailPengaduan(idPengaduan: PengaduanItem?) {
         binding.namaUser.text = idPengaduan?.ditambahkanOleh
         binding.isiPengaduan.text = idPengaduan?.isiPengaduan
     }

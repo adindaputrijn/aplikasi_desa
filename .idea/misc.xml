@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable-v24/ic_user.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_back.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_login.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_notification.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_pengaduan.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_person.xml" value="0.159" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_register.xml" value="0.1385" />
-        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_berita.xml" value="0.1" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_round_format_list_bulleted_24.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_roundlist.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_berita.xml" value="0.22" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_berita.xml" value="0.192481884057971" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_layanan.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_lembaga.xml" value="0.18704710144927536" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_pengaduan.xml" value="0.18704710144927536" />
@@ -19,7 +28,14 @@
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_potensi.xml" value="0.1947463768115942" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_program_desa.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_splash.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/fragment_berita.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_berita.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_galeri.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_home_galeri.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_kategori.xml" value="0.192481884057971" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_kategori_berita.xml" value="0.192481884057971" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_lembaga.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_pengaduan.xml" value="0.19010416666666666" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_potensi.xml" value="0.18704710144927536" />

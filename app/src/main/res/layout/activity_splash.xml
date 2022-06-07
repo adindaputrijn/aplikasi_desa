@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:fontFamily="@font/akaya_telivigala"
+            android:fontFamily="@font/abhaya_libre_medium"
             android:text="APLIKASI SIADES"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="30dp"
@@ -34,13 +34,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/akaya_telivigala"
+            android:fontFamily="@font/abhaya_libre_medium"
+            android:text="Desa Sitimulyo"
             android:textAlignment="center"
-            android:text="Desa Sitimulyo
-            Kecamatan piyungan
-            Kabupaten Bantul"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="30dp"/>
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abhaya_libre_medium"
+            android:text="Kecamatan piyungan"
+            android:layout_marginTop="-6dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abhaya_libre_medium"
+            android:text=" Kabupaten Bantul"
+            android:layout_marginTop="-6dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30dp" />
 
     </LinearLayout>
 

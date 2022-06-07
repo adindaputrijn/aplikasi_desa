@@ -26,7 +26,7 @@ class ActivityGaleri : AppCompatActivity() {
         adapterGaleri = AdapterGaleri {  }
         binding.cover.apply {
             adapter = adapterGaleri
-            layoutManager = LinearLayoutManager(this@ActivityGaleri)
+            layoutManager = GridLayoutManager(this@ActivityGaleri, 2)
         }
 
         getListGaleri()

@@ -57,14 +57,14 @@
                         android:src="@drawable/ic_logout"
                         app:tint="@color/white" />
 
-                    <ImageView
-                        android:id="@+id/listPengaduan"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_list"
-                        app:tint="@color/white" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/listPengaduan"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/ic_list"-->
+<!--                        app:tint="@color/white" />-->
 
                 </RelativeLayout>
 
@@ -99,6 +99,7 @@
                         android:id="@+id/home"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:fontFamily="@font/abeezee"
                         android:text="Yulya Marda Ningsih"
                         android:textSize="15sp"
@@ -110,12 +111,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/home"
                         android:layout_marginTop="5dp"
-                        android:text="1901092020"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"
                         android:drawablePadding="8dp"
-                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
                         android:fontFamily="@font/abeezee"
+                        android:gravity="center_vertical"
+                        android:text="1901092020"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
                         app:drawableTint="@color/purple_700" />
 
                     <ImageView
@@ -161,10 +163,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:padding="10dp"
             tools:listitem="@layout/item_adapter_berita"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:id="@+id/beritaRecycler"
-            android:padding="10dp"/>
+            android:id="@+id/beritaRecycler"/>
+
 
     </LinearLayout>
 

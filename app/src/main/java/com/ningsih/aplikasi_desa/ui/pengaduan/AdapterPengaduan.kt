@@ -21,7 +21,7 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
             binding.namaPengaduan.text = pengaduanItem?.ditambahkanPada
 
             binding.root.setOnClickListener {
-                Toast.makeText(binding.root.context, pengaduanItem?.ditambahkanPada, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(binding.root.context, pengaduanItem?.ditambahkanPada, Toast.LENGTH_SHORT).show()
                 click(pengaduanItem)
             }
         }
@@ -48,7 +48,7 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
     }
 
     fun addItem(itemPengaduan : List<PengaduanItem?>){
-        itemListPengaduan.clear()
+//        itemListPengaduan.clear()
         itemListPengaduan.addAll(itemPengaduan)
         notifyDataSetChanged()
     }

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
     tools:context=".ui.home.adapter.AdapterKategori">
 
     <RelativeLayout
@@ -16,9 +16,8 @@
     <LinearLayout
         android:id="@+id/cardView2"
         android:layout_centerHorizontal="true"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:cardCornerRadius="10dp">
+        android:layout_width="55dp"
+        android:layout_height="55dp">
 
         <ImageView
             android:id="@+id/coverKategori"

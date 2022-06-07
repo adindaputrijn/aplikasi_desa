@@ -5,21 +5,22 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
-    android:layout_margin="7dp"
-    tools:context=".ui.home.adapter.AdapterBerita">
+    android:layout_margin="10dp">
+<!--    tools:context=".ui.home.adapter.AdapterHomeGaleri"-->
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+            android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             app:cardCornerRadius="10dp">
 
             <ImageView
-                android:id="@+id/berita"
+                android:id="@+id/galeri"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/desa"
@@ -28,14 +29,14 @@
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:layout_below="@+id/cardView"
+            android:layout_below="@+id/cardView2"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_margin="10dp"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/namaBerita"
+                android:id="@+id/namaGaleri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
@@ -44,6 +45,7 @@
                 android:padding="8dp"/>
 
         </LinearLayout>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

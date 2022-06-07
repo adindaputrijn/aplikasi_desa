@@ -3,7 +3,8 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="Home"
+        />
     <item
         android:id="@+id/pemberitahuan"
         android:icon="@drawable/ic_notification"
@@ -11,7 +12,7 @@
 
     <item
         android:id="@+id/profil"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_roundlist"
         android:title="Profil"/>
 
 <!--    <item-->

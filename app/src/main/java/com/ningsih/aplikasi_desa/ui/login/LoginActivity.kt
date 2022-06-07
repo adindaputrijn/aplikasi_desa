@@ -94,7 +94,8 @@ class LoginActivity : BottomSheetDialogFragment() {
                 ) {
                     if (response.isSuccessful){
                         Prefs.putString(Constant.NIK, response.body()?.user?.nik)
-
+                        Prefs.putString(Constant.NAMA, response.body()?.user?.nama)
+                        dismiss()
                         requireActivity().recreate()
                     }
                 }
