@@ -28,16 +28,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Tuliskan Nama Anda"
-            android:layout_marginTop="8dp"
+            android:hint="Pedukuhan"
+            android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nama"
-                android:inputType="text"
-                android:gravity="top|start"
+            <Spinner
+                android:id="@+id/slct_layanan"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_spinner"
+                android:layout_marginTop="2dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

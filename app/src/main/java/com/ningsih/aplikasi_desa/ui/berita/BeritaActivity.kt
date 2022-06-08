@@ -12,7 +12,9 @@ import com.ningsih.aplikasi_desa.databinding.ItemAdapterBeritaBinding
 import com.ningsih.aplikasi_desa.network.NetworkConfig
 import com.ningsih.aplikasi_desa.response.BeritaItem
 import com.ningsih.aplikasi_desa.response.ResponseBerita
+import com.ningsih.aplikasi_desa.ui.home.HomeFragment
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterKategoriBerita
+import com.pixplicity.easyprefs.library.Prefs
 import retrofit2.Call
 import retrofit2.Response
 
@@ -33,6 +35,13 @@ class BeritaActivity : AppCompatActivity() {
                 startActivity(this)
             }
         }
+
+//        binding.back.setOnClickListener {
+//            Intent(requireActivity(), HomeFragment::class.java).apply {
+//                    startActivity(this)
+//                }
+//            }
+
 
         binding.activityBerita.apply {
             adapter = adapterKategoriBerita

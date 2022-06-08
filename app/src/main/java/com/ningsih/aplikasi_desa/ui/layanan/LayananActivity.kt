@@ -33,7 +33,7 @@ class LayananActivity : AppCompatActivity() {
                 }
             }else
 
-            Toast.makeText(this, it?.namaLayanan, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, it?.namaLayanan, Toast.LENGTH_SHORT).show()
             Intent(this@LayananActivity, DetailLayananActivity::class.java).apply{
                 putExtra("id_layanan", it)
                 startActivity(this)

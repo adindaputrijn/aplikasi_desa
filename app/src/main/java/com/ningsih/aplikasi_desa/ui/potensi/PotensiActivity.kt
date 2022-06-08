@@ -32,7 +32,7 @@ class PotensiActivity : AppCompatActivity() {
                 }
             }else {
 
-                Toast.makeText(this, it?.judul, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, it?.judul, Toast.LENGTH_SHORT).show()
                 Intent(this@PotensiActivity, DetailPotensiActivity::class.java).apply {
                     putExtra("id_potensi", it)
                     startActivity(this)

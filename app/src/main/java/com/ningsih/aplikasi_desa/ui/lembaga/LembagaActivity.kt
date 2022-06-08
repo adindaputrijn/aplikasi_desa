@@ -34,7 +34,7 @@ class LembagaActivity : AppCompatActivity() {
                 }
             }else {
 
-                Toast.makeText(this, it?.namaLembaga, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, it?.namaLembaga, Toast.LENGTH_SHORT).show()
                 Intent(this@LembagaActivity, DetailLembagaActivity::class.java).apply {
                     putExtra("id_lembaga", it)
                     startActivity(this)

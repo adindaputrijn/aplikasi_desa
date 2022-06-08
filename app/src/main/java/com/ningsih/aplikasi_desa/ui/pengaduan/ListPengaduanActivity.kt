@@ -1,9 +1,11 @@
 package com.ningsih.aplikasi_desa.ui.pengaduan
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ningsih.aplikasi_desa.MainActivity
 import com.ningsih.aplikasi_desa.R
@@ -13,9 +15,14 @@ import com.ningsih.aplikasi_desa.network.NetworkConfig
 import com.ningsih.aplikasi_desa.response.ResponsePengaduan
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterPotensi
 import com.ningsih.aplikasi_desa.ui.lembaga.DetailLembagaActivity
+import com.ningsih.aplikasi_desa.ui.login.LoginActivity
 import com.ningsih.aplikasi_desa.ui.potensi.DetailPotensiActivity
+import com.ningsih.aplikasi_desa.utils.Constant
+import com.pixplicity.easyprefs.library.Prefs
 import retrofit2.Call
 import retrofit2.Response
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class ListPengaduanActivity : AppCompatActivity() {
 
@@ -39,6 +46,7 @@ class ListPengaduanActivity : AppCompatActivity() {
                 Intent(this@ListPengaduanActivity, DetailPengaduanActivity::class.java).apply {
                     putExtra("id_pengaduan", it)
                     startActivity(this)
+
                 }
             }
         }
@@ -51,7 +59,10 @@ class ListPengaduanActivity : AppCompatActivity() {
     }
 
     private fun getListPengaduan() {
-        NetworkConfig.getService().getAllPengaduan()
+
+        NetworkConfig.getService().getAllPengaduan(
+            Prefs.getString(Constant.NIK)
+        )
             .enqueue(object : retrofit2.Callback<ResponsePengaduan>{
                 override fun onResponse(
                     call: Call<ResponsePengaduan>,
@@ -68,4 +79,7 @@ class ListPengaduanActivity : AppCompatActivity() {
 
             })
     }
+
+
+
 }

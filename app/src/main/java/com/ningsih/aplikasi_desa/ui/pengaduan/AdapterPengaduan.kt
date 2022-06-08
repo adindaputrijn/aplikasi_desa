@@ -1,5 +1,6 @@
 package com.ningsih.aplikasi_desa.ui.pengaduan
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,8 @@ import com.ningsih.aplikasi_desa.databinding.ItemAdapterPotensiBinding
 import com.ningsih.aplikasi_desa.response.PengaduanItem
 import com.ningsih.aplikasi_desa.response.PotensiItem
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterPotensi
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerView.Adapter<AdapterPengaduan.ViewHolder>(){
     inner class ViewHolder(private val binding: ItemAdapterPengaduanBinding) :
@@ -52,5 +55,16 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
         itemListPengaduan.addAll(itemPengaduan)
         notifyDataSetChanged()
     }
+
+//    fun generateDate(date : String) : String{
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+//            val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+//            val date = LocalDate.parse(date, firstApiFormat)
+//
+//            return "${date.dayOfWeek} - ${date.month}"
+//        }
+//        return date
+//
+//    }
 
 }

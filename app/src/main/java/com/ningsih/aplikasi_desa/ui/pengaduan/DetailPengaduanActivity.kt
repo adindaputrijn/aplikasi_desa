@@ -9,6 +9,7 @@ class DetailPengaduanActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailPengaduanBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -17,7 +18,7 @@ class DetailPengaduanActivity : AppCompatActivity() {
 
         val idPengaduan = intent.getParcelableExtra<PengaduanItem>("id_pengaduan")
 
-        binding.namaUser.text = idPengaduan?.ditambahkanOleh
+        binding.namaUser.text = idPengaduan?.nama
         binding.isiPengaduan.text = idPengaduan?.isiPengaduan
     }
 }

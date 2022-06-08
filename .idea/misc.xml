@@ -12,12 +12,13 @@
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_register.xml" value="0.1385" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_round_format_list_bulleted_24.xml" value="0.159" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/ic_roundlist.xml" value="0.159" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/drawable/selector_spinner.xml" value="0.1" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_berita.xml" value="0.22" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_berita.xml" value="0.192481884057971" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_layanan.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_lembaga.xml" value="0.18704710144927536" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_pengaduan.xml" value="0.18704710144927536" />
-        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_potensi.xml" value="0.22" />
+        <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_potensi.xml" value="0.25" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_detail_program.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_layanan.xml" value="0.18568840579710144" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/activity_lembaga.xml" value="0.18704710144927536" />
@@ -40,6 +41,7 @@
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_pengaduan.xml" value="0.19010416666666666" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/layout/item_adapter_potensi.xml" value="0.18704710144927536" />
         <entry key="..\:/StudioProject/Aplikasi_Desa/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/android-sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.192481884057971" />
       </map>
     </option>
   </component>

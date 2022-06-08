@@ -69,12 +69,16 @@ interface ApiService {
     @POST("pengaduan/submit")
     fun pengaduanSubmit(
         @Field("pengaduan") pengaduan: String,
-        @Field("nama") nama: String
+        @Field("nama") nama: String,
+        @Field("id_layanan") idLayanan: String
 
     ): retrofit2.Call<GeneralResponse>
 
-    @GET("pengaduan")
-    fun getAllPengaduan(): retrofit2.Call<ResponsePengaduan>
+    @FormUrlEncoded
+    @POST("pengaduan")
+    fun getAllPengaduan(
+        @Field("nik") nik: String,
+    ): retrofit2.Call<ResponsePengaduan>
 
     @GET("detailPengaduan")
     fun getAllDetailPengaduan(@Path("id_pengaduan")idPengaduan: String?) : retrofit2.Call<ResponsePengaduan>

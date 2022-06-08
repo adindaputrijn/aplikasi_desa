@@ -77,17 +77,18 @@
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Pedukuhan"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pedukuhan"
-                android:inputType="text"
-                android:maxLines="1"
+            <Spinner
+                android:id="@+id/slct_pedukuhan"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_spinner"
+                android:layout_marginTop="2dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <Button
