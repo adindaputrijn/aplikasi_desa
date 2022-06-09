@@ -41,6 +41,11 @@ class LembagaActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.rvLembaga.apply {
             adapter = adapterLembaga
             layoutManager = LinearLayoutManager(this@LembagaActivity)

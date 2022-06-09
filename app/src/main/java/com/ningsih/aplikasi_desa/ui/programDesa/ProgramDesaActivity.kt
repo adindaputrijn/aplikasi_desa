@@ -32,6 +32,10 @@ class ProgramDesaActivity : AppCompatActivity() {
             }
         }
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.activityProgram.apply {
             adapter = adapterProgram
             layoutManager = LinearLayoutManager(this@ProgramDesaActivity)

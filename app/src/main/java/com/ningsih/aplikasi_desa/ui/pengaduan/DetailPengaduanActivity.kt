@@ -16,6 +16,9 @@ class DetailPengaduanActivity : AppCompatActivity() {
         binding = ActivityDetailPengaduanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
         val idPengaduan = intent.getParcelableExtra<PengaduanItem>("id_pengaduan")
 
         binding.namaUser.text = idPengaduan?.nama

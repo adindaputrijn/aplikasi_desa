@@ -16,6 +16,10 @@ class DetailLayananActivity : AppCompatActivity() {
         binding = ActivityDetailLayananBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         val idLayanan = intent.getParcelableExtra<LayananItem>("id_layanan")
 
         binding.layanan.text = idLayanan?.namaLayanan

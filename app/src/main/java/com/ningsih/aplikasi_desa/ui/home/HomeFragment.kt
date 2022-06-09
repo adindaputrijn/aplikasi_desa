@@ -16,6 +16,7 @@ import com.ningsih.aplikasi_desa.response.ResponseBerita
 import com.ningsih.aplikasi_desa.response.ResponseGaleri
 import com.ningsih.aplikasi_desa.response.ResponseKategori
 import com.ningsih.aplikasi_desa.ui.berita.BeritaActivity
+import com.ningsih.aplikasi_desa.ui.berita.DetailBeritaActivity
 import com.ningsih.aplikasi_desa.ui.galeri.ActivityGaleri
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterBerita
 import com.ningsih.aplikasi_desa.ui.home.adapter.AdapterGaleri
@@ -34,15 +35,32 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapterBerita: AdapterBerita
+    private lateinit var adapterPengumuman: AdapterBerita
     private lateinit var adapterKategori: AdapterKategori
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
 
-        adapterBerita = AdapterBerita()
+        adapterBerita = AdapterBerita{
+            Intent(requireActivity(), DetailBeritaActivity::class.java).apply {
+                putExtra("id_berita", it)
+                startActivity(this)
+            }
+        }
         binding.beritaRecycler.apply{
             adapter = adapterBerita
+            layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL,false)
+        }
+
+        adapterPengumuman = AdapterBerita {
+            Intent(requireActivity(), DetailBeritaActivity::class.java).apply {
+                putExtra("id_berita", it)
+                startActivity(this)
+            }
+        }
+        binding.pengumumanRecycler.apply{
+            adapter = adapterPengumuman
             layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL,false)
         }
 
@@ -81,25 +99,33 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             layoutManager = GridLayoutManager(requireActivity(),3)
         }
 
-        binding.notif.setOnClickListener {
-            Prefs.clear()
-            requireActivity().recreate()
-        }
-
-//        binding.listPengaduan.setOnClickListener {
-//            if (!Prefs.contains(Constant.NIK)) {
-//                Intent(requireActivity(), ListPengaduanActivity::class.java).apply {
-//                    startActivity(this)
-//                }
-//            }
-//        }
-
+        getPengumuman()
         getBerita()
         getKategori()
     }
 
+    private fun getPengumuman() {
+        NetworkConfig.getService().getAllBerita("pengumuman")
+            .enqueue(object :retrofit2.Callback<ResponseBerita>{
+                override fun onResponse(
+                    call: Call<ResponseBerita>,
+                    response: Response<ResponseBerita>
+                ) {
+                    if (response.isSuccessful){
+                        val data = response.body()?.berita
+                        data?.let { adapterPengumuman.addItem(it) }
+                    }
+                }
+
+                override fun onFailure(call: Call<ResponseBerita>, t: Throwable) {
+                    
+                }
+
+            })
+    }
+
     private fun getBerita(){
-        NetworkConfig.getService().getAllBerita()
+        NetworkConfig.getService().getAllBerita("agenda")
             .enqueue(object: retrofit2.Callback<ResponseBerita>{
                 override fun onResponse(
                     call: Call<ResponseBerita>,

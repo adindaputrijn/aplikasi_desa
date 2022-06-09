@@ -20,6 +20,10 @@ class DetailLembagaActivity : AppCompatActivity() {
         binding = ActivityDetailLembagaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         val idLembaga = intent.getParcelableExtra<LembagaItem>("id_lembaga")
 
         binding.lembaga.text = idLembaga?.namaLembaga

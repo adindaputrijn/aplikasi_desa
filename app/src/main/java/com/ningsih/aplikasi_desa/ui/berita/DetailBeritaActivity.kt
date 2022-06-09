@@ -22,6 +22,9 @@ class DetailBeritaActivity : AppCompatActivity() {
         binding = ActivityDetailBeritaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
 
         val berita = intent.getParcelableExtra<BeritaItem>("id_berita")
 
@@ -31,6 +34,8 @@ class DetailBeritaActivity : AppCompatActivity() {
             .load("${NetworkConfig.BASEURL}berita/${berita?.gambar}")
             .into(binding.coverBeritaKat2)
     }
+
+
 
 
 

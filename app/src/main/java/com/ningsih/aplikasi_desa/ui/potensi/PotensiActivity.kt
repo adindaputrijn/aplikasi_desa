@@ -39,6 +39,11 @@ class PotensiActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.activityPotensi.apply {
             adapter = adapterPotensi
             layoutManager = LinearLayoutManager(this@PotensiActivity)

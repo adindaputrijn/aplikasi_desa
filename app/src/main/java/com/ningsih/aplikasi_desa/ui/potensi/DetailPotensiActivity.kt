@@ -27,6 +27,10 @@ class DetailPotensiActivity : AppCompatActivity() {
         binding = ActivityDetailPotensiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         val idPotensi = intent.getParcelableExtra<PotensiItem>("id_potensi")
 
         MapsInitializer.initialize(this)

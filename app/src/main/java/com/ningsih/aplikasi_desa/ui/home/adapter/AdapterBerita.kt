@@ -12,7 +12,7 @@ import com.ningsih.aplikasi_desa.databinding.ItemAdapterBeritaBinding
 import com.ningsih.aplikasi_desa.network.NetworkConfig
 import com.ningsih.aplikasi_desa.response.BeritaItem
 
-class AdapterBerita : RecyclerView.Adapter<AdapterBerita.ViewHolder>(){
+class AdapterBerita(private val click: (BeritaItem?)-> Unit) : RecyclerView.Adapter<AdapterBerita.ViewHolder>(){
 
     private val listItemBerita = mutableListOf<BeritaItem?>()
 
@@ -24,6 +24,10 @@ class AdapterBerita : RecyclerView.Adapter<AdapterBerita.ViewHolder>(){
                 Glide.with(binding.root.context)
                     .load("${NetworkConfig.BASEURL}berita/${beritaItem?.gambar}")
                     .into(binding.berita)
+
+                binding.root.setOnClickListener {
+                    click(beritaItem)
+                }
             }
         }
 

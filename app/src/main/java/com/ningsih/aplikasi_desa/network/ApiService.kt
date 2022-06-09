@@ -6,7 +6,9 @@ import retrofit2.http.*
 interface ApiService {
 
     @GET("berita")
-    fun getAllBerita(): retrofit2.Call<ResponseBerita>
+    fun getAllBerita(
+        @Query("filter") filter: String?
+    ): retrofit2.Call<ResponseBerita>
 
     @GET("detailBerita")
     fun getAllDetailBerita(@Path("id_berita")idBerita: String?) : retrofit2.Call<ResponseBerita>

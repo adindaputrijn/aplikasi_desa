@@ -36,11 +36,9 @@ class BeritaActivity : AppCompatActivity() {
             }
         }
 
-//        binding.back.setOnClickListener {
-//            Intent(requireActivity(), HomeFragment::class.java).apply {
-//                    startActivity(this)
-//                }
-//            }
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
 
 
         binding.activityBerita.apply {
@@ -52,7 +50,7 @@ class BeritaActivity : AppCompatActivity() {
     }
 
     private fun getListBeritaKat(){
-        NetworkConfig.getService().getAllBerita()
+        NetworkConfig.getService().getAllBerita("berita")
             .enqueue(object : retrofit2.Callback<ResponseBerita>{
                 override fun onResponse(
                     call: Call<ResponseBerita>,

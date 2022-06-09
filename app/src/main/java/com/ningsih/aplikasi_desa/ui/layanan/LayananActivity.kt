@@ -40,6 +40,10 @@ class LayananActivity : AppCompatActivity() {
             }
         }
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.activityLayanan.apply {
             adapter = adapterLayanan
             layoutManager = LinearLayoutManager(this@LayananActivity)

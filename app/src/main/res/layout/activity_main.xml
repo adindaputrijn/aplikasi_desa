@@ -13,7 +13,7 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"
         android:id="@+id/bottomNav"
-        app:labelVisibilityMode="unlabeled"/>
+        style="@style/Widget.BottomNavigationView"/>
 
     <FrameLayout
         android:layout_width="match_parent"

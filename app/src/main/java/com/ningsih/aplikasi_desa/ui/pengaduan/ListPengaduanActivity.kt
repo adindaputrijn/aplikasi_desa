@@ -51,6 +51,10 @@ class ListPengaduanActivity : AppCompatActivity() {
             }
         }
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.activityPengaduan.apply {
             adapter = adapterPengaduan
             layoutManager = LinearLayoutManager(this@ListPengaduanActivity)
@@ -81,5 +85,11 @@ class ListPengaduanActivity : AppCompatActivity() {
     }
 
 
-
+//    fun generateDate(){
+//        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O){
+//            val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+//            val date = LocalDate.parse("2019-08-07 09:00:00" , firstApiFormat)
+//        }
+//
+//    }
 }

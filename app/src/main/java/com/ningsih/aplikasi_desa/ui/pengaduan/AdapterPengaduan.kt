@@ -21,7 +21,8 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
     inner class ViewHolder(private val binding: ItemAdapterPengaduanBinding) :
         RecyclerView.ViewHolder(binding.root){
         fun onBindItem(pengaduanItem: PengaduanItem?){
-            binding.namaPengaduan.text = pengaduanItem?.ditambahkanPada
+            binding.namaPengaduan.text = pengaduanItem?.namaLayanan
+            binding.tanggal.text = generateDate(pengaduanItem?.ditambahkanPada.toString())
 
             binding.root.setOnClickListener {
 //                Toast.makeText(binding.root.context, pengaduanItem?.ditambahkanPada, Toast.LENGTH_SHORT).show()
@@ -56,15 +57,15 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
         notifyDataSetChanged()
     }
 
-//    fun generateDate(date : String) : String{
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-//            val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-//            val date = LocalDate.parse(date, firstApiFormat)
-//
-//            return "${date.dayOfWeek} - ${date.month}"
-//        }
-//        return date
-//
-//    }
+    fun generateDate(date : String) : String{
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+            val date = LocalDate.parse(date, firstApiFormat)
+
+            return "${date.dayOfWeek} - ${date.month}"
+        }
+        return date
+
+    }
 
 }

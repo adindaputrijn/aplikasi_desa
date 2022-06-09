@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
 //                        loginSheet.show(supportFragmentManager, "login_sheet")
                     }
                 }
+                R.id.logout ->{
+                    Prefs.clear()
+                    recreate()
+                }
             }
             return@setOnItemSelectedListener true
         }

@@ -19,6 +19,10 @@ class DetailProgramActivity : AppCompatActivity() {
         binding = ActivityDetailProgramBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
         val program = intent.getParcelableExtra<ProgramItem>("id_program")
 
         binding.program.text = program?.namaProgram
