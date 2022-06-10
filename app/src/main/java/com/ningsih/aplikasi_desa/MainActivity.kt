@@ -41,12 +41,16 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.profil ->{
                     if (Prefs.contains(Constant.NIK)){
+                        
                         val listpengaduan = ListPengaduanActivity()
 //                    pengaduan.show(supportFragmentManager, "pengaduan")
                         val intent = Intent(this, listpengaduan::class.java)
                         startActivity(intent)
 //                        val loginSheet = LoginActivity()
 //                        loginSheet.show(supportFragmentManager, "login_sheet")
+                    }else {
+                        val loginSheet = LoginActivity()
+                        loginSheet.show(supportFragmentManager, "login_sheet")
                     }
                 }
                 R.id.logout ->{

@@ -24,6 +24,12 @@ class AdapterPengaduan (private val click: (PengaduanItem?) -> Unit) : RecyclerV
             binding.namaPengaduan.text = pengaduanItem?.namaLayanan
             binding.tanggal.text = generateDate(pengaduanItem?.ditambahkanPada.toString())
 
+            if (pengaduanItem?.isSelesai == "N"){
+                binding.selesai.text = "Belum Di Proses"
+            }else{
+                binding.selesai.text = "Sudah Di Proses"
+            }
+
             binding.root.setOnClickListener {
 //                Toast.makeText(binding.root.context, pengaduanItem?.ditambahkanPada, Toast.LENGTH_SHORT).show()
                 click(pengaduanItem)

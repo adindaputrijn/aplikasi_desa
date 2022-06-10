@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkConfig {
-    const val  BASEURL ="http://192.168.1.27/aplikasiDesaWeb/public/"
+    const val  BASEURL ="http://192.168.1.29/aplikasiDesaWeb/public/"
 
     private fun setOkHttp(): OkHttpClient{
         val logging = HttpLoggingInterceptor().setLevel(
